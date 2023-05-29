@@ -1,0 +1,63 @@
+.cards {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  box-shadow: 3px 4px 0px var(--main-color);
+  cursor: pointer;
+  margin-right: 42px;
+  width: 175px;
+  padding: 12px 0px;
+  position: relative;
+}
+
+.cards>div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(30deg, var(--background-color) 50%, var(--main-color) 51%);
+  background-size: 270% 100%;
+  background-position: 0px 0px;
+  border: solid 1px var(--main-color);
+  z-index: 0;
+  transition: background-position 0.2s ease-out, transform 0.2s ease-out;
+}
+
+.cards>*:not(div) {
+  transition: transform 0.2s ease-out;
+}
+
+.cards:hover>* {
+  transform: translate(2px, 2px);
+}
+
+.cards:hover>div {
+  background-position: 100% 0;
+}
+
+.cards:hover span {
+  color: var(--background-color);
+}
+
+.cards:hover svg path{
+  fill: var(--background-color);
+}
+
+.cards:link,
+.cards:visited {
+  text-decoration: none;
+}
+
+.cards>span {
+  font-size: 24px;
+  color: var(--main-color);
+  margin-left: 10px;
+  z-index: 1;
+}
+
+.cards svg {
+  margin-left: 15px;
+  z-index: 1;
+}

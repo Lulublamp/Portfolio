@@ -1,0 +1,32 @@
+.super-header {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  white-space: nowrap;
+  width: 200%;
+  font-size: 142px;
+  text-transform: uppercase;
+  margin-top: 50px;
+  margin-bottom: 0px;
+  cursor: default;
+  position: relative;
+  left: -100%;
+  transform: translateX(-100%);
+  font-family: 'Cairoli-Now-Condensed', sans-serif;
+}
+
+.ticker__inner {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  will-change: translate3d;
+  white-space: nowrap;
+}
+
+.focus-point {
+  flex-shrink: 0;
+}
+
+.ticker__inner>span:nth-of-type(2n) {
+  margin: 0px 50px;
+}

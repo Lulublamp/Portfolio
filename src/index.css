@@ -1,13 +1,90 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+  --main-color: #141937;
+  --background-color: #F3F3F3;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+  font-family: 'GTWalsheimPro-Regular';
+  src: url('Asset/Fonts/GTWalsheimPro-Regular.woff2') format('woff2'),
+    url('Asset/Fonts/GTWalsheimPro-Regular.woff') format('woff'),
+    url('Asset/Fonts/GTWalsheimPro-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
+
+@font-face {
+  font-family: 'Cairoli-Now-Condensed';
+  src: url('Asset/Fonts/Cairoli-Now-Condensed-Bold-trial.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'GTWalsheimPro-Regular', sans-serif;
+  color: var(--main-color);
+  background-color: var(--background-color);
+  overflow-x: hidden;
+  height: auto;
+  min-height: calc(100vh - 35px);
+  width: 100%;
+  position: relative;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--main-color);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  z-index: 9999;
+}
+
+.overlay.active {
+  transform: scaleX(1);
+}
+
+.overlay::before,
+.overlay::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 50%;
+  background: inherit;
+}
+
+.overlay::before {
+  bottom: 0;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.3s 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.overlay::after {
+  top: 50%;
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 0.3s 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.overlay.active::before,
+.overlay.active::after {
+  transform: scaleY(1);
+}
+

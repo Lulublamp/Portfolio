@@ -1,0 +1,65 @@
+.workCard {
+  width: 100%;
+  height: 75px;
+  background: linear-gradient(90deg, rgba(20, 25, 55, 0.09) 0%, rgba(243, 243, 243, 0) 100%);
+  border: 1px solid var(--main-color);
+  cursor: pointer;
+  margin-top: 24px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 30px;
+  position: relative;
+  transition: background 0.3s ease-in-out;
+}
+
+.workCard:hover {
+  background: linear-gradient(90deg, rgba(20, 25, 55, 0.09) 0%, rgba(20, 25, 55, 0.09) 100%);
+}
+
+.workCard>div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100%;
+}
+
+.workCard>div:first-of-type {
+  font-size: 32px;
+}
+
+.workCard>div:first-of-type h3 {
+  font-weight: normal;
+  margin-left: 45px;
+  transition: transform 0.3s ease;
+}
+
+.workCard>div:last-of-type span {
+  font-size: 22px;
+  margin-left: 16px;
+}
+
+.works > div:nth-of-type(2) svg {
+  position: fixed;
+  top: -1000px;
+  left: -1000px;
+  z-index: 100;
+  pointer-events: none;
+}
+
+.workCard:hover h3 {
+  transform: translate3d(14px, 0, 0) skew(-10deg, 0deg);
+}
+
+@media (max-width: 1250px){
+  .workCard>div:first-of-type {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 750px){
+  .workCard>div:first-of-type {
+    font-size: 16px;
+  }
+}

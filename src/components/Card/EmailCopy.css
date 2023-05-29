@@ -1,0 +1,16 @@
+.EmailCopycard{
+  position: absolute;
+  width: 150px;
+  height: 40px;	
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  right: 0;
+  background-color: var(--background-color);
+  font-size: 22px;
+  border-radius: 10px;
+  border: solid 1px var(--main-color);
+  color: var(--main-color);
+  z-index: 111;
+}

@@ -1,0 +1,61 @@
+.workPage{
+  width: 80%;
+  height: auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: 0px auto 200px auto;
+}
+
+.workPage > div:first-of-type{
+  width: 100%;
+  margin-top: 150px;
+  height: auto;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  margin-bottom: 150px;
+}
+
+.workPage > div:first-of-type > div{
+  width: 50%;
+  height: auto;
+}
+
+.workPage > div:first-of-type > div > p{
+  font-size: 24px;
+}
+
+.workPage > div:first-of-type > div h3{
+  font-size: 35px;
+  font-weight: bold;
+  margin: 0px 25px 0px 0px;
+}
+
+.workPage > div:first-of-type > div > div{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.workPage > div:first-of-type > div span, .workPage > div:first-of-type > div a{
+  font-size: 24px;
+}
+
+.workPage > div:first-of-type > div a{
+  text-decoration: underline;
+}
+
+.workPage img, .workPage video{
+  max-width: 100%;
+  height: auto;
+}
+
+.workPage > div:not(:first-of-type){
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+.workPage footer h1{
+  cursor: pointer;
+}

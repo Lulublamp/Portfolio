@@ -1,0 +1,22 @@
+.profil>div:first-of-type {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  height: auto;
+  flex-wrap: wrap;
+}
+
+.profil>div:first-of-type img {
+  height: 370px;
+  width: 370px;
+}
+
+.profil>div:first-of-type p {
+  width: 880px;
+  height: 370px;
+  font-size: 24px;
+  text-align: left;
+  line-height: 33px;
+  margin: 0;
+}
